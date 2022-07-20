@@ -1,42 +1,85 @@
 * TOC
 {:toc}
 
-## Welcome to GitHub Pages
+## Welcome to Data Science 2 Go
 
-You can use the [editor on GitHub](https://github.com/kode2go/datasci2go.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+![image](https://user-images.githubusercontent.com/29664888/127746783-bce7bed8-6e7d-4cab-b07d-494e16d8ac88.png)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+![image](https://user-images.githubusercontent.com/29664888/127746796-acd61ea0-759a-4714-b4ec-6853f8e5dd5c.png)
 
+# Statistics and Knowing Your Data
 
-### Markdown
+Statistics is the science of analyzing, reviewing and conclude data. In order to do that you must also be able to analyze your data and it is important to know what type of data we are dealing with.
 
+Some basic statistical numbers include:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+* Mean, median and mode
+* Minimum and maximum value
+* Percentiles
+* Variance and Standard Deviation
+* Covariance and Correlation
+* Probability distributions
 
-```markdown
-Syntax highlighted code block
+The Python language has many built-in functionalities, in addition to libraries for the exact purpose of statistical analysis.
 
-# Header 1
-## Header 2
-### Header 3
+You will learn about these features, and how to use them in the next chapters.
 
-- Bulleted
-- List
+## Types of Data Variables
 
-1. Numbered
-2. List
+See the table below for the various types of data variables we will be working with:
 
-**Bold** and _Italic_ and `Code` text
+![image](https://user-images.githubusercontent.com/29664888/159611320-84663ee7-b010-40d3-a0cc-94f133c37b27.png)
 
-[Link](url) and ![Image](src)
-```
+We need to know what type of data we are dealing with so we can visualize and plot the appropriate figures to analyze them. This site helps to breakdown the typical figures you would need based on the data type you have:
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+https://www.data-to-viz.com/
 
-### Jekyll Themes
+![image](https://user-images.githubusercontent.com/29664888/159611666-b421f53c-4165-42b1-8298-b3d76ceea295.png)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/kode2go/datasci2go.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+For example let us analyze this table below:
 
-### Support or Contact
+![image](https://user-images.githubusercontent.com/29664888/159611875-fe3d185a-9c1a-4549-8a82-88b70b8bf59e.png)
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+* Gender: categorical
+* Sleep: numerical, continuous
+* Bedtime: categorical, ordinal
+* Countries: numerical, discrete
+* Dread: categorical, ordinal (could be numerical)
+
+Lastly, what would telephone area code be like `8001`? 
+
+We can't do any normal math with it so it must be categorical, and it is also not ordered so it must be nominal.
+
+## 1.  Data Cleaning
+It is very important to get rid of the irregularities and clean the data after sourcing it into our system.
+Irregularities are of different types of data.
+* Missing Values
+* Incorrect Format
+* Incorrect Headers
+* Anomalies/Outliers
+
+## 2. Bivariate Analysis
+
+When we talk about bivariate analysis, it means analyzing 2 variables. Since we know there are numerical and categorical variables, there is a way of analyzing these variables as shown below:
+
+![image](https://user-images.githubusercontent.com/29664888/176466124-55cc62cd-ebef-41d0-bb7b-7f25010db338.png)
+
+## 3. Numerical vs. Numerical
+
+For this case we can use plots like Scatter plots, Line plots, Heatmap for correlation, and Joint plots
+
+## 4. Categorical vs. Numerical
+
+For this case we can use Bar charts, Violin plots, Categorical box plots, and swarm plots
+
+## 5. Two Categorical Variables
+
+For this case we can use Bar charts, Grouped bar charts, and Point plots
+
+## 6. Normalizing and Scaling
+
+Often the variables of the data set are of different scales i.e. one variable is in millions and others in only 100. For e.g. in our data set Income is having values in thousands and age in just two digits. Since the data in these variables are of different scales, it is tough to compare these variables.
+
+Feature scaling (also known as data normalization) is the method used to standardize the range of features of data. Since the range of values of data may vary widely, it becomes a necessary step in data preprocessing while using machine learning algorithms.
+
+In this method, we convert variables with different scales of measurements into a single scale. Standard scaler normalizes the data using the formula (x-mean)/standard deviation. We will be doing this only for the numerical variables.
